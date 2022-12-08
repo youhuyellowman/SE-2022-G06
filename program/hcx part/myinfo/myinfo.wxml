@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  鹰眼反应力
+</view>
+<view>
+  <text>个人信息界面</text>
+</view>
