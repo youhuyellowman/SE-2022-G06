@@ -1,8 +1,8 @@
-<!--pages/登录界面/login.wxml-->
+<!--pages/login.wxml-->
 <view class="container">
-  <image src='../images/登录界面素材.jpg' class="bg-img"></image>
+  <image class="bg-img"></image>
   <image src="../images/LOGO.jpg" class="logo-img"></image>
-  <text class="login-title">鹰眼小程序</text>
+  <text class="login-title">鹰眼反应力</text>
   <button class="login-btn">微信授权登录</button>
   <text class="login-item">@author——G06</text>
 </view>
