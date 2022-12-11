@@ -1,8 +1,8 @@
 <view class="container">
   <image class="img" src='../相关素材/登录界面素材.jpg'></image>
-  <view class="test1" hover-class="boxHover">
+  
   <button class="testbutton">开始测试</button>
-  </view>
+  
   <label class="first">第一次测试</label>
   <text class="firsttxt">*******</text>
   <view id="fenge1"></view>
