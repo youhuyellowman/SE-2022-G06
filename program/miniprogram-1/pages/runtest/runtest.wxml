@@ -1,0 +1,27 @@
+<view class="container">
+  <image class="img" src='../相关素材/登录界面素材.jpg'></image>
+  
+  <button class="testbutton">开始测试</button>
+  
+  <label class="first">第一次测试</label>
+  <text class="firsttxt">*******</text>
+  <view id="fenge1"></view>
+  <label class="second">第二次测试</label>
+  <text class="secondtxt">*******</text>
+  <view id="fenge2"></view>
+  <label class="third">第三次测试</label>
+  <text class="thirdtxt">*******</text>
+  <view id="fenge3"></view>
+  <button class="restart">重新开始</button>
+  <button class="save">保存成绩</button>
+  <view class="rank-bottom">
+    <button class="rank-btn1">
+      <image class="btn-img" mode="aspectFit"></image>
+      <text class="btn-txt">成绩</text>
+    </button>
+    <button class="rank-btn2">
+      <image class="btn-img" mode="aspectFit"></image>
+      <text class="btn-txt">我的</text>
+    </button>
+  </view>
+</view>
