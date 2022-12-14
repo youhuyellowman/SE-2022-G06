@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/runtest/runtest",
     "pages/index/myinfo",
     "pages/login/login"
   ],

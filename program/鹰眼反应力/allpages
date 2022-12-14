@@ -1,0 +1,6 @@
+      "pages/login/login",
+      "pages/runtest/runtest",
+      "pages/myinfo/myinfo",
+      "pages/rank/rank",
+      "pages/changeimg/changeimg",
+      "pages/changename/changename"
