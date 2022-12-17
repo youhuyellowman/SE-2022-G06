@@ -11,6 +11,31 @@ Page({
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
+  torank(){
+    wx.navigateTo({
+      url: '/pages/rank/rank',
+    })
+  },
+  totest(){
+wx.navigateTo({
+  url: '/pages/runtest/runtest',
+})
+  }, 
+  tologin(){
+    wx.navigateTo({
+      url: '/pages/runtest/runtest',
+    })
+      },
+  toimg(){
+    wx.navigateTo({
+      url: '/pages/changeimg/changeimg',
+    })
+  } ,
+  toname(){
+    wx.navigateTo({
+      url: '/pages/changename/changename',
+    })
+  },
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({

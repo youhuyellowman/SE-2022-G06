@@ -1,24 +1,24 @@
 <!--index.wxml-->
 <view class="container">
-  <image class="img" src='../相关素材/登录界面素材.jpg'></image>
-  <image class="img2" src='../相关素材/LOGO.jpg'></image>
-  <button id="changetx">修改头像</button>
+  <image class="img" ></image>
+  <image class="img2"></image>
+  <button id="changetx" bindtap="toimg">修改头像</button>
   <view id="fenge1"></view>
   <label id="name">昵称:</label>
   <text id="namein">鹰眼小程序</text>
-  <button id="changename">修改头像</button>
+  <button id="changename" bindtap="toname">修改昵称</button>
   <view id="fenge2"></view>
   <label id="tel">手机电话:</label>
   <text id="telin">192******</text>
   <view id="fenge3"></view>
-  <button id="out">退出登录</button>
+  <button id="out" binktap="tologin">退出登录</button>
   <view class="rank-bottom">
-    <button class="rank-btn1">
-      <image class="btn-img" src="../相关素材/rank.png" mode="aspectFit"></image>
+    <button class="rank-btn1" bindtap="torank">
+      <image class="btn-img" mode="aspectFit" ></image>
       <text class="btn-txt">成绩</text>
     </button>
-    <button class="rank-btn2">
-      <image class="btn-img" src="../相关素材/测试.png" mode="aspectFit"></image>
+    <button class="rank-btn2" bindtap="totest">
+      <image class="btn-img" mode="aspectFit" ></image>
       <text class="btn-txt">测试</text>
     </button>
   </view>

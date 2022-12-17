@@ -1,6 +1,11 @@
 {
     "pages": [
-      "pages/changename/changename"
+      "pages/myinfo/myinfo",
+      "pages/rank/rank",
+      "pages/runtest/runtest",
+      "pages/login/login",
+      "pages/changename/changename",
+      "pages/changeimg/changeimg"
     ],
     "window": {
         "backgroundTextStyle": "light",
