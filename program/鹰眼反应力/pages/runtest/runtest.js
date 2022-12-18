@@ -22,34 +22,17 @@ Page({
     var date=new Date();
     clicknum=clicknum+1;
     console.log(clicknum)
-    if(clicknum==1){
+    if(clicknum%2==1){
       this.setData({color1:'blue'})
       var randNum =  (Math.random() * 8000) + 2000;
       console.log(randNum)
       setTimeout(()=>{
           this.setData({color1:'green'})
         },randNum)
-        let firstchange=date.getTime()
-        
-		// if(intervaldate<1000){//间隔时间小于1000，可以自定义
-    //   // clicknum = clicknum + 1;
-    //   console.log(clicknum)
-    //   console.log(intervaldate);
-    //   if(clicknum==3){
-    //     this.setData({color1:'blue'})
-    //   }
-		// 	if(clicknum==6){//点击次数等于6将进行任务
-    //             //可以使用自己想用的方法
-		// 		wx.navigateTo({
-		// 			url: '/pages/index/index',
-		// 		  })
-		// 	}
-		// }else if(intervaldate>2000){//间隔时间超过500将重新计数
-		// 	clicknum = 1
-    // }
+        let firstchange=date.getMilliseconds();  		
   }
-  if(clicknum==2){
-    let firsttest = date.getTime();
+  if(clicknum%2==0){
+    let firsttest = date.getMilliseconds();;
     let ftesttime=firsttest-firstchange
     console.log(ftesttime)
   }
