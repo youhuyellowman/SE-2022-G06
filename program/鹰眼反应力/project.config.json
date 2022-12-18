@@ -1,5 +1,5 @@
 {
-  "cloudfunctionRoot": "pages/cloud/",
+  "cloudfunctionRoot": "cloud/",
   "appid": "wxca9673b770ed4036",
   "compileType": "miniprogram",
   "libVersion": "2.17.0",
@@ -52,6 +52,5 @@
   },
   "projectname": "program",
   "condition": {},
-  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "cloudfunctionRoot": "cloud/"
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }
