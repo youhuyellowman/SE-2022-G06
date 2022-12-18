@@ -1,10 +1,8 @@
 <view class="container">
   <image class="img"></image>
-  
-  <button class="testbutton">开始测试</button>
-  
+  <button class="testbutton" bindtap="click" style="background-color:{{color1}}">开始测试</button>
   <label class="first">第一次测试</label>
-  <text class="firsttxt">*******</text>
+  <input class="firsttxt">*******</input>
   <view id="fenge1"></view>
   <label class="second">第二次测试</label>
   <text class="secondtxt">*******</text>

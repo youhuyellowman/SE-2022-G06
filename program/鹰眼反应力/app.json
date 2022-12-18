@@ -1,8 +1,8 @@
 {
     "pages": [
+      "pages/runtest/runtest",
       "pages/myinfo/myinfo",
       "pages/rank/rank",
-      "pages/runtest/runtest",
       "pages/login/login",
       "pages/changename/changename",
       "pages/changeimg/changeimg"
