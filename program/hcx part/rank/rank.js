@@ -1,4 +1,0 @@
-// index.js
-Page({
-  
-})

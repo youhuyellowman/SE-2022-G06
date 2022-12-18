@@ -1,7 +1,9 @@
 {
     "pages": [
+      "pages/changeimg/changeimg",
         "pages/index/index",
         "pages/登录界面/login"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
