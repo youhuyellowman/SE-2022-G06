@@ -66,7 +66,7 @@
   top: 140px;
   left: -100px;
   font-family: 方正姚体;
-  border-width: 3px;
+  border-width: 2px;
   border-color: #797979;
   border-style: solid;
   border-radius: 15px;
@@ -89,8 +89,8 @@
   top: 155px;
   left: -100px;
   font-family: 方正姚体;
-  border-width: 3px;
-  border-color: black;
+  border-width: 2px;
+  border-color: #797979;
   border-style: solid;
   border-radius: 15px;
   width: 100px;

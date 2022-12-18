@@ -3,6 +3,14 @@
   <image class="bg-img"></image>
   <image class="logo-img"></image>
   <text class="login-title">鹰眼反应力</text>
-  <button class="login-btn">微信授权登录</button>
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button class="login-btn" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取微信授权 </button>
+      <button class="login-btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取微信授权 </button>
+    </block>
+    <block wx:else>
+      <button class="login-btn" bindtap="bindViewTap"> 进入主页 </button>
+    </block>
+  </view>>
   <text class="login-item">@author——G06</text>
 </view>
