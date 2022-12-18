@@ -1,16 +1,46 @@
 // index.js
 // 获取应用实例
 const app = getApp()
+let clicktime = 0;//上次点击时间
+let clicknum = 0;//点击次数默认0
 
 Page({
   data: {
     motto: 'Hello World',
+    color1:'red',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
+
+	click() {//按钮方法
+		let currentTime = Date.now();//设置本次点击时间
+    let intervaldate = currentTime - clicktime;//本次点击时间减上次点击时间等于间隔时间
+    clicknum=clicknum+1;
+    console.log(clicknum)
+    if(clicknum==1){
+      this.setData({color1:'blue'})
+		if(intervaldate<1000){//间隔时间小于300，可以自定义
+      clicknum = clicknum + 1;
+      console.log(clicknum)
+      console.log(intervaldate);
+      if(clicknum==3){
+        this.setData({color1:'blue'})
+      }
+			if(clicknum==6){//点击次数等于6将进行任务
+                //可以使用自己想用的方法
+				wx.navigateTo({
+					url: '/pages/index/index',
+				  })
+			}
+		}else if(intervaldate>2000){//间隔时间超过500将重新计数
+			clicknum = 1
+    }
+  }
+		clicktime = currentTime;//设置上次点击时间
+	  },
   torank(){
     wx.navigateTo({
       url: '/pages/rank/rank',
