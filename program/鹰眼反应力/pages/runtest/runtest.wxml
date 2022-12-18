@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="img" src='../相关素材/登录界面素材.jpg'></image>
+  <image class="img"></image>
   
   <button class="testbutton">开始测试</button>
   
@@ -15,12 +15,12 @@
   <button class="restart">重新开始</button>
   <button class="save">保存成绩</button>
   <view class="rank-bottom">
-    <button class="rank-btn1">
-      <image class="btn-img" mode="aspectFit"></image>
+    <button class="rank-btn1" bindtap="torank">
+      <image class="btn-img"></image>
       <text class="btn-txt">成绩</text>
     </button>
-    <button class="rank-btn2">
-      <image class="btn-img" mode="aspectFit"></image>
+    <button class="rank-btn2" bindtap="tomy">
+      <image class="btn-img"></image>
       <text class="btn-txt">我的</text>
     </button>
   </view>

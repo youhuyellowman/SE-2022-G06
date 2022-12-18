@@ -3,12 +3,12 @@
   <image class="bg-img"></image>
 
   <view class="rank-bottom">
-    <button class="rank-btn1">
-      <image class="btn-img" src="/pages/images/测试.png" mode="aspectFit"></image>
+    <button class="rank-btn1" bindtap="totest">
+      <image class="btn-img" mode="aspectFit"></image>
       <text class="btn-txt">测试</text>
     </button>
-    <button class="rank-btn2">
-      <image class="btn-img" src="/pages/images/我的.png" mode="aspectFit"></image>
+    <button class="rank-btn2" bindtap="tomy">
+      <image class="btn-img" mode="aspectFit"></image>
       <text class="btn-txt">我的</text>
     </button>
   </view>

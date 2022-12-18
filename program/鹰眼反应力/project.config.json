@@ -42,12 +42,15 @@
     "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true
   },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
   "projectname": "program",
-  "condition": {}
+  "condition": {},
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "cloudfunctionRoot": "cloud/"
 }
