@@ -25,9 +25,14 @@
   font-size: 34px;
   font-family: 方正姚体;
   box-shadow: 6px 6px 6px #565756 inset;
-  background-color: red;
+  /* background-color: red; */
 }
-
+.testbutton1{
+  color:red;
+}
+.container .testbutton::after{
+  color:blue;
+}
 .container .first{
   font-family: 方正姚体;
   position: absolute;

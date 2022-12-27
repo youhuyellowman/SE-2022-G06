@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   data: {
     userInfo: {},
@@ -17,10 +18,14 @@ Page({
     wx.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
+        // 打印用户信息
+        // console.log(res.userInfo);
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        app.data.userInfo = res.userInfo;
+        console.log(app.data.userInfo);
       }
     })
   },

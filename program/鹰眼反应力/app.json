@@ -1,17 +1,18 @@
 {
     "pages": [
       "pages/login/login",
-      "pages/rank/rank",
       "pages/runtest/runtest",
       "pages/myinfo/myinfo",
+      "pages/rank/rank",
       "pages/changename/changename",
       "pages/changeimg/changeimg"
     ],
     "window": {
-        "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "鹰眼反应力",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh":true,
+        "backgroundTextStyle":"dark"
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
