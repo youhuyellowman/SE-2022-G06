@@ -1,6 +1,14 @@
 // app.js
 App({
+<<<<<<< HEAD
 
+=======
+  data: {
+    userInfo: {},
+    hasUserInfo: false,
+    canIUseGetUserProfile: false,
+  }
+>>>>>>> hcx
   // onLaunch: function(){
   //   //云开发环境的初始化
   //   wx.cloud.init({
