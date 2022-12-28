@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <image class="bg-img"></image>
-
+  <!-- <label>我的排名</label> -->
   <view class="rank-bottom">
     <button class="rank-btn1" bindtap="totest">
       <image class="btn-img" mode="aspectFit"></image>
