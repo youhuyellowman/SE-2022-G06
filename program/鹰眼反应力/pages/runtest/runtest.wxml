@@ -2,13 +2,13 @@
   <image class="img"></image>
   <button class="testbutton" bindtap="click" style="background-color:{{color1}}">开始测试</button>
   <label class="first">第一次测试</label>
-  <input class="firsttxt">*******</input>
+  <view class="firsttxt" bindtap="firstshow">{{first}}</view>
   <view id="fenge1"></view>
   <label class="second">第二次测试</label>
-  <input class="secondtxt">*******</input>
+  <view class="secondtxt" bindtap="secondshow">{{second}}</view>
   <view id="fenge2"></view>
   <label class="third">第三次测试</label>
-  <input class="thirdtxt">*******</input>
+  <view class="thirdtxt" bindtap="thirdshow">{{third}}</view>
   <view id="fenge3"></view>
   <button class="restart">重新开始</button>
   <button class="save">保存成绩</button>
