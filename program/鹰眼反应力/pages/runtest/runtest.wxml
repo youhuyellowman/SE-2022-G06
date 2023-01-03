@@ -10,8 +10,8 @@
   <label class="third">第三次测试</label>
   <view class="thirdtxt" bindtap="thirdshow">{{third}}</view>
   <view id="fenge3"></view>
-  <button class="restart">重新开始</button>
-  <button class="save">保存成绩</button>
+  <button class="restart" bindtap="again">重新开始</button>
+  <button class="save" bindtap="savescore">保存成绩</button>
   <view class="rank-bottom">
     <button class="rank-btn1" bindtap="torank">
       <image class="btn-img"></image>

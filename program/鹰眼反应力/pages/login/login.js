@@ -35,5 +35,6 @@ Page({
     wx.navigateTo({
           url: '../runtest/runtest'
      })
+     
  },
 })
