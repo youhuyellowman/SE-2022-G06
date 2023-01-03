@@ -8,13 +8,16 @@ let clicknum = 0; //点击次数默认0
 let timefirst = 0;
 let timesecond = 0;
 let timethird = 0;
+let three = 0;
+let avge=0;
 Page({
   data: {
     motto: 'Hello World',
     color1: 'red',
-    first:'',
-    second:'',
-    third:'',
+    first: 0,
+    second: 0,
+    third: 0,
+    avge:0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -22,7 +25,7 @@ Page({
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
 
-  click() { //按钮方法
+  click: function () { //按钮方法
     //let currentTime = Date.now();//设置本次点击时间
     //let intervaldate = currentTime - clicktime;//本次点击时间减上次点击时间等于间隔时间
     var date = new Date();
@@ -36,7 +39,7 @@ Page({
       console.log(randNum)
       setTimeout(() => {
         this.setData({
-          color1: 'green'
+          color1: 'yellow'
         })
       }, randNum)
       let firstchange = date.getMilliseconds();
@@ -44,40 +47,101 @@ Page({
     if (clicknum % 2 == 0) {
       let firsttest = date.getMilliseconds();
       let timecj = firsttest - firstchange
-      if (timecj < 100) {
+      if (timecj < 200) {
         timecj = timecj + 1000
       }
       console.log(timecj)
       if (clicknum == 2) {
         timefirst = timecj
+        this.setData({
+          color1: 'red'
+        })
       }
       if (clicknum == 4) {
         timesecond = timecj
+        this.setData({
+          color1: 'red'
+        })
       }
       if (clicknum == 6) {
         timethird = timecj
+        this.setData({
+          color1:'red',
+          first: timefirst,
+          second: timesecond,
+          third: timethird
+        })
         // console.log(timefirst)
         // console.log(timesecond)
         // console.log(timethird)
+
       }
 
     }
     //clicktime = currentTime;//设置上次点击时间
   },
-  firstshow:function () {
+  firstshow: function () {
     this.setData({
-      first:timefirst
+      first: timefirst
     })
   },
-  secondshow:function () {
+  secondshow: function () {
     this.setData({
-      second:timesecond
+      second: timesecond
     })
   },
-  thirdshow:function () {
+  thirdshow: function () {
     this.setData({
-      third:timethird
+      third: timethird
     })
+  },
+  again:function() {
+    timefirst=0,
+    timesecond=0,
+    timethird=0,
+    clicknum=0
+    this.setData({
+      first: timefirst,
+      second: timesecond,
+      third: timethird
+    })
+    console.log(clicknum)
+  },
+  savescore: function () {
+    // clicknum=0
+    // this.setData({
+    //   first: timefirst,
+    //   second: timesecond,
+    //   third: timethird
+    // })
+    console.log(clicknum)
+    if (clicknum!=6) {
+      wx.showToast({
+        icon: 'none',
+        title: '未完成三次测试无法保存',
+        duration: 2000,
+      })
+    } else {
+      avge=(timefirst+timesecond+timethird)/3
+      console.log(avge)
+      console.log(timefirst)
+      wx.cloud.database().collection('record')
+        .doc("b12bdba163b3f97b00022925336d463b")
+        .update({
+          data:{
+            avg:avge,
+            first:timefirst,
+            second:timesecond,
+            third:timethird,
+          }
+        })
+        .then(res =>{
+          console.log('修改成功',res)
+        })
+        .catch(res =>{
+          console.log('修改失败',res)
+        })
+    }
   },
   torank() {
     wx.navigateTo({
