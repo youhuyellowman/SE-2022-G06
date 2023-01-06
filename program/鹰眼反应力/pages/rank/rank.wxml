@@ -1,7 +1,12 @@
 <!--index.wxml-->
 <view class="container">
   <image class="bg-img"></image>
-  <!-- <label>我的排名</label> -->
+  <text class="groud">广告招商请联系G06</text>
+  <text class='rankup' >历史平均成绩:</text>
+  <view class="rankupdate" bindtap="check">{{user.history_score}}</view>
+  <text class='ranklast' >最近一次成绩:</text>
+  <view class="ranklastdate" bindtap="check2">{{user.last_score}}</view>
+  <!-- <button class="rankcx" bindtap="up">查看成绩变化</button> -->
   <view class="rank-bottom">
     <button class="rank-btn1" bindtap="totest">
       <image class="btn-img" mode="aspectFit"></image>

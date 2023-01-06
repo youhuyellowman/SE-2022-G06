@@ -10,6 +10,9 @@ let timesecond = 0;
 let timethird = 0;
 let three = 0;
 let avge=0;
+let testcount=0;
+let history=0;
+let lastscore=0;
 Page({
   data: {
     motto: 'Hello World',
@@ -18,6 +21,9 @@ Page({
     second: 0,
     third: 0,
     avge:0,
+    testcount:0,
+    history:0,
+    lastscore:0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -107,7 +113,7 @@ Page({
     })
     console.log(clicknum)
   },
-  savescore: function () {
+  savescore() {
     // clicknum=0
     // this.setData({
     //   first: timefirst,
@@ -122,11 +128,38 @@ Page({
         duration: 2000,
       })
     } else {
+      clicknum=0
       avge=(timefirst+timesecond+timethird)/3
-      console.log(avge)
-      console.log(timefirst)
+      testcount=testcount+1
+      lastscore=avge
+      wx.cloud.database().collection('user')
+      .doc("acca0db963b70b55001f9a733790365b")
+      .update({
+        data:{
+          test_count:testcount,
+          last_score:lastscore,
+          history_score:history
+        }
+      })
+      .then(res =>{
+        console.log('修改成功',res)
+      })
+      .catch(err =>{
+        console.log('修改失败',err)
+      })
+      history=(history*(testcount-1)+lastscore)/(testcount)
+      // console.log(avge)
+      // console.log(timefirst)
       wx.cloud.database().collection('record')
-        .doc("b12bdba163b3f97b00022925336d463b")
+      // .add({
+      //   data:{
+      //     first:timefirst,
+      //     second:timesecond,
+      //     third:timethird,
+      //     avg:avge
+      //   }
+      // })
+        .doc("acca0db963b6f2a5001ea8da4386ad2f")
         .update({
           data:{
             avg:avge,
@@ -135,11 +168,12 @@ Page({
             third:timethird,
           }
         })
+        // .get()
         .then(res =>{
           console.log('修改成功',res)
         })
-        .catch(res =>{
-          console.log('修改失败',res)
+        .catch(err =>{
+          console.log('修改失败',err)
         })
     }
   },
@@ -147,6 +181,7 @@ Page({
     wx.navigateTo({
       url: '/pages/rank/rank',
     })
+    
   },
   tomy() {
     wx.navigateTo({
