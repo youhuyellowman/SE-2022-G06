@@ -23,7 +23,7 @@ App({
     //云开发环境的初始化
     wx.cloud.init({
       env:"cloud1-5g6hmlhg19b4edab",
-      database:'test-0gzpu617280360cb'
+      // database:'test-0gzpu617280360cb'
     })
   // onLaunch(){
   //   wx.cloud.init({
