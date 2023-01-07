@@ -1,9 +1,11 @@
 {
     "pages": [
-      "pages/login/login",
-      "pages/runtest/runtest",
-      "pages/myinfo/myinfo",
       "pages/rank/rank",
+      "pages/runtest/runtest",
+      "pages/login/login",
+
+      "pages/myinfo/myinfo",
+     
       "pages/changename/changename",
       "pages/changeimg/changeimg"
     ],
