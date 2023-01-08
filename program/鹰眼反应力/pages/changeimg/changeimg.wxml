@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <view class="container">
   <image class="bg-img"></image>
-  <!-- <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
-  <button class="chgimg-btn">保存修改</button>
+  <image class="img" bindtap="chooseImage"><text bindtap="chooseImage" class="in">+</text></image>
+  <button class="chgimg-btn" bindtap="keepImg">保存修改</button>
 </view>
