@@ -1,15 +1,35 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
+let name1='';
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
+    name2:'',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+  },
+  nameshow(){
+    wx.cloud.database().collection('user')
+    .doc('acca0db963b70b55001f9a733790365b')
+    .get()
+    .then(res =>{
+      console.log('查询成功',res)
+      name1=res.data.user_name
+      console.log(name1)
+      this.setData({
+        user:res.data
+      })
+    })
+    .catch(err =>{
+      console.log('查询失败',err)
+    })
+    this.setData({
+      user_name:name1
+    })
   },
   torank(){
     wx.navigateTo({

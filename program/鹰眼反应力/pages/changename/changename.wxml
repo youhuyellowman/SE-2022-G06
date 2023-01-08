@@ -5,5 +5,5 @@
     <view class="chgname-txt">昵称：{{inputValue}}</view>
     <input class="chgname-input"  maxlength="10" bindinput="bindKeyInput" placeholder="请输入新昵称……"/>
   </view>
-  <button class="chgname-btn">保存修改</button>
+  <button class="chgname-btn" bindtap="save">保存修改</button>
 </view>

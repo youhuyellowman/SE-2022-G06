@@ -5,11 +5,11 @@
   <button id="changetx" bindtap="toimg">修改头像</button>
   <view id="fenge1"></view>
   <label id="name">昵称:</label>
-  <text id="namein">鹰眼小程序</text>
+  <text id="namein" bindtap="nameshow">{{user.user_name}}</text>
   <button id="changename" bindtap="toname">修改昵称</button>
-  <view id="fenge2"></view>
-  <label id="tel">手机电话:</label>
-  <text id="telin">192******</text>
+  <!-- <view id="fenge2"></view> -->
+  <!-- <label id="tel">手机电话:</label>
+  <text id="telin">192******</text> -->
   <view id="fenge3"></view>
   <button id="out" binktap="tologin">退出登录</button>
   <view class="rank-bottom">
